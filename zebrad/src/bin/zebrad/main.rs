@@ -4,5 +4,6 @@ use zebrad::application::{boot, APPLICATION};
 
 /// Process entry point for `zebrad`
 fn main() {
+    println!("Hello there!");
     boot(&APPLICATION);
 }
