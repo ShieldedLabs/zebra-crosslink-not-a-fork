@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 
 if [[ -z "$1" ]]; then
     RED='\033[0;31m'

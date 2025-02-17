@@ -118,7 +118,7 @@ jobs:
             # DockerHub release and CI tags.
             # This tag makes sure tests are using exactly the right image, even when multiple PRs run at the same time.
             type=sha,event=push
-            # These CI-only tags support CI on PRs, the main branch, and scheduled full syncs. 
+            # These CI-only tags support CI on PRs, the main branch, and scheduled full syncs.
             # These tags do not appear on DockerHub, because DockerHub images are only published on the release event.
             type=ref,event=pr
             type=ref,event=branch
@@ -157,7 +157,7 @@ jobs:
         with:
           version: "lab:latest"
           driver: cloud
-          endpoint: "zfnd/zebra"
+          endpoint: "samhsmith/testbuilder"
 
       # Build and push image to Google Artifact Registry, and possibly DockerHub
       - name: Build & push
@@ -203,7 +203,7 @@ jobs:
         with:
           command: cves,recommendations,compare,environment
           image: us-docker.pkg.dev/${{ vars.GCP_PROJECT }}/zebra/${{ inputs.image_name }}:${{ steps.meta.outputs.version }}
-          to: zfnd/zebra:latest
+          to: samhsmith/testzebra:latest
           ignore-base: true
           ignore-unchanged: true
           only-fixed: true

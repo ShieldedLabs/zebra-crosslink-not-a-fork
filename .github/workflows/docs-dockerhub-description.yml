@@ -26,5 +26,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          repository: zfnd/zebra
+          repository: samhsmith/testzebra
           short-description: ${{ github.event.repository.description }}
